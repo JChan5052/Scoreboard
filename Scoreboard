@@ -1,0 +1,13 @@
+public class Scoreboard 
+{
+    private int Score1;
+    private int Score2;
+    private Str team1;
+    private Str team2;
+    public Scoreboard (str 1, str 2)
+    {
+     team1=1;
+     team2=2;
+    }
+    
+}

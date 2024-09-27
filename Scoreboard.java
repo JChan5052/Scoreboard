@@ -2,14 +2,14 @@ public class Scoreboard
 {
     private int Score1;
     private int Score2;
-    private Str team1;
-    private Str team2;
+    private String team1;
+    private String team2;
     private int swap;
-
-    public Scoreboard (str 1, str 2)
+    private String selected;
+    public Scoreboard (String one, String two)
     {
-     team1=1;
-     team2=2;
+     team1=one;
+     team2=two;
     }
 
     public void recordPlay(int scored)
@@ -31,18 +31,17 @@ public class Scoreboard
 
   public String getScore()
   {
-    System.out.print(Score1);
-    System.out.print("-");
-    System.out.print(Score2);
-    System.out.print("-");
     if (swap%2==0)
-     {
-      System.out.print(1);
-     }
-    else 
-     {
-      System.out.print(2);
-     }
+    {
+     selected=team1;
+    }
+   else 
+    {
+      selected=team2;
+    }
+    return Score1+"-"+Score2+"-"+selected;
+
+
   }
 
 }

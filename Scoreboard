@@ -4,10 +4,45 @@ public class Scoreboard
     private int Score2;
     private Str team1;
     private Str team2;
+    private int swap;
+
     public Scoreboard (str 1, str 2)
     {
      team1=1;
      team2=2;
     }
-    
+
+    public void recordPlay(int scored)
+    {
+     if (swap%2==0)
+      {
+       Score1=Score1+scored;
+      }
+     else 
+      {
+       Score2=Score2+scored;
+      }
+
+    if (scored==0)
+      {
+       swap++;
+      }
+   }
+
+  public String getScore()
+  {
+    System.out.print(Score1);
+    System.out.print("-");
+    System.out.print(Score2);
+    System.out.print("-");
+    if (swap%2==0)
+     {
+      System.out.print(1);
+     }
+    else 
+     {
+      System.out.print(2);
+     }
+  }
+
 }
